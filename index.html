@@ -1,0 +1,54 @@
+<head>
+    <link rel="stylesheet" href="style.css">
+<div id="app"></div>
+
+<script src="https://unpkg.com/webamp"></script>
+<script>
+    const app = document.getElementById("app");
+
+    // Create Webamp instance with the uploaded song
+    const webamp = new Webamp({
+        initialTracks: [
+            {
+                metaData: {
+                    title: "Mountains of Friendship",
+                    artist: "MUHAMMED AL MUQIT"
+                },
+                url: "y2mate.is - mountains of friendship lyrics translation-W4LCv_xhmMM-192k-1712878125.mp3" // Make sure the file is in the same folder
+            }
+        ]
+    });
+
+    webamp.renderWhenReady(app);
+</script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+    particlesJS("particles-js", {
+        "particles": {
+            "number": { "value": 50 },
+            "size": { "value": 3 },
+            "move": { "speed": 2 }
+        }
+    });
+</script>
+<script>
+    const app = document.getElementById("app");
+
+    setTimeout(() => {
+        const webamp = new Webamp({
+            initialTracks: [
+                {
+                    metaData: {
+                        title: "Mountains of Friendship",
+                        artist: "Unknown Artist"
+                    },
+                    url: "y2mate.is - mountains of friendship lyrics translation-W4LCv_xhmMM-192k-1712878125.mp3"
+                }
+            ]
+        });
+
+        webamp.renderWhenReady(app);
+    }, 1000); // Delay Webamp by 1 second
+</script>
+
+</head>
